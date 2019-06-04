@@ -27,11 +27,11 @@ target 'Surveys' do
 
   target 'SurveysTests' do
     inherit! :search_paths
+    test_pods
   end
 
   target 'SurveysUITests' do
     inherit! :search_paths
-    test_pods
   end
 
 end
