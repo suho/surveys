@@ -1,0 +1,4 @@
+scheme("Surveys")
+device("iPhone 6")
+clean(true)
+skip_build(true)
