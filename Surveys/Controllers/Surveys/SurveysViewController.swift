@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SurveysViewController.swift
 //  Surveys
 //
 //  Created by Su Ho V. on 6/5/19.
@@ -8,4 +8,5 @@
 
 import UIKit
 
-class ViewController: UIViewController {}
+final class SurveysViewController: ViewController {
+}

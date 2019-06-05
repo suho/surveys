@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		432D625522A6F3F200D6801E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D625422A6F3F200D6801E /* AppDelegate.swift */; };
 		432D625722A6F3F200D6801E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D625622A6F3F200D6801E /* ViewController.swift */; };
-		432D625A22A6F3F200D6801E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432D625822A6F3F200D6801E /* Main.storyboard */; };
 		432D625C22A6F3F400D6801E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432D625B22A6F3F400D6801E /* Assets.xcassets */; };
 		432D625F22A6F3F400D6801E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432D625D22A6F3F400D6801E /* LaunchScreen.storyboard */; };
 		432D626A22A6F3F400D6801E /* SurveysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D626922A6F3F400D6801E /* SurveysTests.swift */; };
 		432D627522A6F3F400D6801E /* SurveysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D627422A6F3F400D6801E /* SurveysUITests.swift */; };
+		434F2CFB22A7F6FC00DE01A9 /* SurveysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2CF922A7F6FC00DE01A9 /* SurveysViewController.swift */; };
+		434F2CFC22A7F6FC00DE01A9 /* SurveysViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434F2CFA22A7F6FC00DE01A9 /* SurveysViewController.xib */; };
+		434F2CFF22A7F7EF00DE01A9 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2CFE22A7F7EF00DE01A9 /* Application.swift */; };
 		485AC57972C962D4F8EF646F /* libPods-SurveysUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38143532ECF6AEE2F78788EA /* libPods-SurveysUITests.a */; };
 		A6453F78BF0C4DEBBDC458CF /* libPods-Surveys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACAB67BA7757BB7EE6BAE42 /* libPods-Surveys.a */; };
 		DD4B0E68BB600590B1A2ED0B /* libPods-SurveysTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F9322E98B2B921D1F090E9 /* libPods-SurveysTests.a */; };
@@ -43,7 +45,6 @@
 		432D625122A6F3F200D6801E /* Surveys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surveys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432D625422A6F3F200D6801E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		432D625622A6F3F200D6801E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		432D625922A6F3F200D6801E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		432D625B22A6F3F400D6801E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		432D625E22A6F3F400D6801E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		432D626022A6F3F400D6801E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		432D627022A6F3F400D6801E /* SurveysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		432D627422A6F3F400D6801E /* SurveysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysUITests.swift; sourceTree = "<group>"; };
 		432D627622A6F3F400D6801E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		434F2CF922A7F6FC00DE01A9 /* SurveysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewController.swift; sourceTree = "<group>"; };
+		434F2CFA22A7F6FC00DE01A9 /* SurveysViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveysViewController.xib; sourceTree = "<group>"; };
+		434F2CFE22A7F7EF00DE01A9 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		55F9322E98B2B921D1F090E9 /* libPods-SurveysTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SurveysTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		620B9D8F7530AB3A3E5DDA0D /* Pods-Surveys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surveys.release.xcconfig"; path = "Target Support Files/Pods-Surveys/Pods-Surveys.release.xcconfig"; sourceTree = "<group>"; };
 		AFED79AD0DC0BA6D03837BDF /* Pods-SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.debug.xcconfig"; path = "Target Support Files/Pods-SurveysTests/Pods-SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,12 +118,13 @@
 		432D625322A6F3F200D6801E /* Surveys */ = {
 			isa = PBXGroup;
 			children = (
-				432D625422A6F3F200D6801E /* AppDelegate.swift */,
-				432D625622A6F3F200D6801E /* ViewController.swift */,
-				432D625822A6F3F200D6801E /* Main.storyboard */,
-				432D625B22A6F3F400D6801E /* Assets.xcassets */,
-				432D625D22A6F3F400D6801E /* LaunchScreen.storyboard */,
-				432D626022A6F3F400D6801E /* Info.plist */,
+				434F2CEE22A7F63200DE01A9 /* Application */,
+				434F2CEF22A7F63B00DE01A9 /* Controllers */,
+				434F2CF022A7F64900DE01A9 /* Extensions */,
+				434F2CF122A7F64E00DE01A9 /* Models */,
+				434F2CF222A7F65400DE01A9 /* Protocols */,
+				434F2CF322A7F65A00DE01A9 /* Services */,
+				434F2CF422A7F66100DE01A9 /* Views */,
 			);
 			path = Surveys;
 			sourceTree = "<group>";
@@ -140,6 +145,103 @@
 				432D627622A6F3F400D6801E /* Info.plist */,
 			);
 			path = SurveysUITests;
+			sourceTree = "<group>";
+		};
+		434F2CEE22A7F63200DE01A9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				434F2CFD22A7F70D00DE01A9 /* Base */,
+				434F2CF722A7F6A700DE01A9 /* Resources */,
+				434F2CF622A7F69A00DE01A9 /* Constants */,
+				434F2CF522A7F68C00DE01A9 /* Infos */,
+				432D625422A6F3F200D6801E /* AppDelegate.swift */,
+				434F2CFE22A7F7EF00DE01A9 /* Application.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		434F2CEF22A7F63B00DE01A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				434F2CF822A7F6E200DE01A9 /* Surveys */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		434F2CF022A7F64900DE01A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		434F2CF122A7F64E00DE01A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		434F2CF222A7F65400DE01A9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		434F2CF322A7F65A00DE01A9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		434F2CF422A7F66100DE01A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		434F2CF522A7F68C00DE01A9 /* Infos */ = {
+			isa = PBXGroup;
+			children = (
+				432D626022A6F3F400D6801E /* Info.plist */,
+			);
+			path = Infos;
+			sourceTree = "<group>";
+		};
+		434F2CF622A7F69A00DE01A9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		434F2CF722A7F6A700DE01A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				432D625B22A6F3F400D6801E /* Assets.xcassets */,
+				432D625D22A6F3F400D6801E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		434F2CF822A7F6E200DE01A9 /* Surveys */ = {
+			isa = PBXGroup;
+			children = (
+				434F2CF922A7F6FC00DE01A9 /* SurveysViewController.swift */,
+				434F2CFA22A7F6FC00DE01A9 /* SurveysViewController.xib */,
+			);
+			path = Surveys;
+			sourceTree = "<group>";
+		};
+		434F2CFD22A7F70D00DE01A9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				432D625622A6F3F200D6801E /* ViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		6ADE5BE07073F453FF9F9B35 /* Frameworks */ = {
@@ -274,9 +376,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434F2CFC22A7F6FC00DE01A9 /* SurveysViewController.xib in Resources */,
 				432D625F22A6F3F400D6801E /* LaunchScreen.storyboard in Resources */,
 				432D625C22A6F3F400D6801E /* Assets.xcassets in Resources */,
-				432D625A22A6F3F200D6801E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,8 +507,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434F2CFF22A7F7EF00DE01A9 /* Application.swift in Sources */,
 				432D625722A6F3F200D6801E /* ViewController.swift in Sources */,
 				432D625522A6F3F200D6801E /* AppDelegate.swift in Sources */,
+				434F2CFB22A7F6FC00DE01A9 /* SurveysViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,14 +546,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		432D625822A6F3F200D6801E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				432D625922A6F3F200D6801E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		432D625D22A6F3F400D6801E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -583,7 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Surveys/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Surveys/Application/Infos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,7 +697,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Surveys/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Surveys/Application/Infos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
