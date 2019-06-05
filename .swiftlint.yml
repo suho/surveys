@@ -96,13 +96,3 @@ custom_rules:
    regex: '(\+ \[.*\].*)'
    message: "Do not use + for array, should use `append` instead"
    severity: warning
-  optional_checking:
-   name: "Optional checking"
-   regex: '(\?\?.+)'
-   message: "You should use `if let` or `guard let` or `if else` instead"
-   severity: warning
-  conditional:
-   name: "Condition statement"
-   regex: '( \? .+ : )'
-   message: "Should use if else instead"
-   severity: warning

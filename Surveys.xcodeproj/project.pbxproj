@@ -16,6 +16,9 @@
 		434F2CFB22A7F6FC00DE01A9 /* SurveysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2CF922A7F6FC00DE01A9 /* SurveysViewController.swift */; };
 		434F2CFC22A7F6FC00DE01A9 /* SurveysViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434F2CFA22A7F6FC00DE01A9 /* SurveysViewController.xib */; };
 		434F2CFF22A7F7EF00DE01A9 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2CFE22A7F7EF00DE01A9 /* Application.swift */; };
+		434F2D0122A801FC00DE01A9 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0022A801FC00DE01A9 /* App.swift */; };
+		434F2D0322A8020D00DE01A9 /* App.Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0222A8020D00DE01A9 /* App.Color.swift */; };
+		434F2D0522A802F200DE01A9 /* App.String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0422A802F200DE01A9 /* App.String.swift */; };
 		485AC57972C962D4F8EF646F /* libPods-SurveysUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38143532ECF6AEE2F78788EA /* libPods-SurveysUITests.a */; };
 		A6453F78BF0C4DEBBDC458CF /* libPods-Surveys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACAB67BA7757BB7EE6BAE42 /* libPods-Surveys.a */; };
 		DD4B0E68BB600590B1A2ED0B /* libPods-SurveysTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F9322E98B2B921D1F090E9 /* libPods-SurveysTests.a */; };
@@ -57,6 +60,9 @@
 		434F2CF922A7F6FC00DE01A9 /* SurveysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewController.swift; sourceTree = "<group>"; };
 		434F2CFA22A7F6FC00DE01A9 /* SurveysViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveysViewController.xib; sourceTree = "<group>"; };
 		434F2CFE22A7F7EF00DE01A9 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		434F2D0022A801FC00DE01A9 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		434F2D0222A8020D00DE01A9 /* App.Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.Color.swift; sourceTree = "<group>"; };
+		434F2D0422A802F200DE01A9 /* App.String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.String.swift; sourceTree = "<group>"; };
 		55F9322E98B2B921D1F090E9 /* libPods-SurveysTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SurveysTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		620B9D8F7530AB3A3E5DDA0D /* Pods-Surveys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surveys.release.xcconfig"; path = "Target Support Files/Pods-Surveys/Pods-Surveys.release.xcconfig"; sourceTree = "<group>"; };
 		AFED79AD0DC0BA6D03837BDF /* Pods-SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.debug.xcconfig"; path = "Target Support Files/Pods-SurveysTests/Pods-SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +220,9 @@
 		434F2CF622A7F69A00DE01A9 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				434F2D0022A801FC00DE01A9 /* App.swift */,
+				434F2D0222A8020D00DE01A9 /* App.Color.swift */,
+				434F2D0422A802F200DE01A9 /* App.String.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -509,7 +518,10 @@
 			files = (
 				434F2CFF22A7F7EF00DE01A9 /* Application.swift in Sources */,
 				432D625722A6F3F200D6801E /* ViewController.swift in Sources */,
+				434F2D0522A802F200DE01A9 /* App.String.swift in Sources */,
 				432D625522A6F3F200D6801E /* AppDelegate.swift in Sources */,
+				434F2D0122A801FC00DE01A9 /* App.swift in Sources */,
+				434F2D0322A8020D00DE01A9 /* App.Color.swift in Sources */,
 				434F2CFB22A7F6FC00DE01A9 /* SurveysViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
