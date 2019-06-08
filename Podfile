@@ -21,6 +21,7 @@ def util_pods
 end
 
 target 'Surveys' do
+  use_frameworks!
   network_pods
   util_pods
   dev_pods

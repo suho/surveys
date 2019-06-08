@@ -26,8 +26,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Octave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjk-bc-VjA">
-                        <rect key="frame" x="129.5" y="150" width="116.5" height="42"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Octave" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rjk-bc-VjA">
+                        <rect key="frame" x="8" y="150" width="359" height="42"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -47,7 +47,9 @@
                 <constraint firstAttribute="bottom" secondItem="YIk-F8-QgX" secondAttribute="bottom" id="5Nb-J8-BW9"/>
                 <constraint firstItem="LZW-L6-Ifr" firstAttribute="top" secondItem="rjk-bc-VjA" secondAttribute="bottom" constant="16" id="6SV-Hv-tw8"/>
                 <constraint firstItem="LZW-L6-Ifr" firstAttribute="centerX" secondItem="rjk-bc-VjA" secondAttribute="centerX" id="6gS-JJ-dOO"/>
+                <constraint firstAttribute="trailing" secondItem="rjk-bc-VjA" secondAttribute="trailing" constant="8" id="7PA-lw-iHI"/>
                 <constraint firstItem="YIk-F8-QgX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ROO-Kr-w19"/>
+                <constraint firstItem="rjk-bc-VjA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="SdH-Bx-gtz"/>
                 <constraint firstItem="i42-8M-EYT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="U7r-cK-iU3"/>
                 <constraint firstAttribute="trailing" secondItem="i42-8M-EYT" secondAttribute="trailing" id="VPY-0n-wKr"/>
                 <constraint firstItem="i42-8M-EYT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZtD-2j-aCE"/>
@@ -58,6 +60,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="258" height="623"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="LZW-L6-Ifr" id="s7E-PK-hmi"/>
+                <outlet property="imageView" destination="YIk-F8-QgX" id="3EI-9t-XYM"/>
+                <outlet property="titleLabel" destination="rjk-bc-VjA" id="kHP-FA-4of"/>
+            </connections>
             <point key="canvasLocation" x="-45.652173913043484" y="231.36160714285714"/>
         </collectionViewCell>
     </objects>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		432D625522A6F3F200D6801E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D625422A6F3F200D6801E /* AppDelegate.swift */; };
-		432D625722A6F3F200D6801E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D625622A6F3F200D6801E /* ViewController.swift */; };
 		432D625C22A6F3F400D6801E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432D625B22A6F3F400D6801E /* Assets.xcassets */; };
 		432D625F22A6F3F400D6801E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432D625D22A6F3F400D6801E /* LaunchScreen.storyboard */; };
 		432D626A22A6F3F400D6801E /* SurveysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D626922A6F3F400D6801E /* SurveysTests.swift */; };
@@ -30,8 +29,17 @@
 		437E1CC222ABFF4300AA5817 /* MoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CC122ABFF4300AA5817 /* MoyaProvider.swift */; };
 		437E1CC422AC0B9C00AA5817 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CC322AC0B9C00AA5817 /* TokenType.swift */; };
 		437E1CC622AC15B900AA5817 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CC522AC15B900AA5817 /* URLRequest.swift */; };
-		A6453F78BF0C4DEBBDC458CF /* libPods-Surveys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACAB67BA7757BB7EE6BAE42 /* libPods-Surveys.a */; };
-		DD4B0E68BB600590B1A2ED0B /* libPods-SurveysTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F9322E98B2B921D1F090E9 /* libPods-SurveysTests.a */; };
+		437E1CC822AC19CD00AA5817 /* SurveysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CC722AC19CD00AA5817 /* SurveysViewModel.swift */; };
+		437E1CCB22AC1A0000AA5817 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CCA22AC1A0000AA5817 /* Survey.swift */; };
+		437E1CCE22AC1C0E00AA5817 /* SurveyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CCD22AC1C0E00AA5817 /* SurveyUseCase.swift */; };
+		437E1CD022AC1C8E00AA5817 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CCF22AC1C8E00AA5817 /* UIViewController.swift */; };
+		437E1CD422AC236800AA5817 /* NimbleNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CD322AC236800AA5817 /* NimbleNetwork.swift */; };
+		437E1CD622AC244E00AA5817 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CD522AC244E00AA5817 /* Error.swift */; };
+		437E1CD822AC262900AA5817 /* SurveyItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CD722AC262900AA5817 /* SurveyItemViewModel.swift */; };
+		437E1CDA22AC280600AA5817 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CD922AC280600AA5817 /* UIImageView.swift */; };
+		437E1CDE22AC295700AA5817 /* App.Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CDD22AC295700AA5817 /* App.Error.swift */; };
+		6ED0DA5D475D7F563B321D02 /* Pods_Surveys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331EF401BBE7E9B8D35F59E0 /* Pods_Surveys.framework */; };
+		CE048620C57E81E7D05D1F22 /* Pods_SurveysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354C67882798CAB3B5006EB5 /* Pods_SurveysTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +56,11 @@
 		00F41931D91AAEC64D0460AD /* Pods-SurveysTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SurveysTests/Pods-SurveysTests.release.xcconfig"; sourceTree = "<group>"; };
 		0448E9F4932724150345318F /* Pods-Surveys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surveys.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surveys/Pods-Surveys.release.xcconfig"; sourceTree = "<group>"; };
 		29764B5B82B8D94A09557C06 /* Pods-SurveysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysUITests.debug.xcconfig"; path = "Target Support Files/Pods-SurveysUITests/Pods-SurveysUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		331EF401BBE7E9B8D35F59E0 /* Pods_Surveys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surveys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		354C67882798CAB3B5006EB5 /* Pods_SurveysTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveysTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38143532ECF6AEE2F78788EA /* libPods-SurveysUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SurveysUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ACAB67BA7757BB7EE6BAE42 /* libPods-Surveys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surveys.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		432D625122A6F3F200D6801E /* Surveys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surveys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432D625422A6F3F200D6801E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		432D625622A6F3F200D6801E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		432D625B22A6F3F400D6801E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		432D625E22A6F3F400D6801E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		432D626022A6F3F400D6801E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,8 +85,16 @@
 		437E1CC122ABFF4300AA5817 /* MoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaProvider.swift; sourceTree = "<group>"; };
 		437E1CC322AC0B9C00AA5817 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
 		437E1CC522AC15B900AA5817 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		437E1CC722AC19CD00AA5817 /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
+		437E1CCA22AC1A0000AA5817 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		437E1CCD22AC1C0E00AA5817 /* SurveyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUseCase.swift; sourceTree = "<group>"; };
+		437E1CCF22AC1C8E00AA5817 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		437E1CD322AC236800AA5817 /* NimbleNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleNetwork.swift; sourceTree = "<group>"; };
+		437E1CD522AC244E00AA5817 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		437E1CD722AC262900AA5817 /* SurveyItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewModel.swift; sourceTree = "<group>"; };
+		437E1CD922AC280600AA5817 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		437E1CDD22AC295700AA5817 /* App.Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.Error.swift; sourceTree = "<group>"; };
 		47B91FB5FF43AE457AD47A0D /* Pods-SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveysTests/Pods-SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
-		55F9322E98B2B921D1F090E9 /* libPods-SurveysTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SurveysTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		620B9D8F7530AB3A3E5DDA0D /* Pods-Surveys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surveys.release.xcconfig"; path = "Target Support Files/Pods-Surveys/Pods-Surveys.release.xcconfig"; sourceTree = "<group>"; };
 		AFED79AD0DC0BA6D03837BDF /* Pods-SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.debug.xcconfig"; path = "Target Support Files/Pods-SurveysTests/Pods-SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3439A9BC340265566A81B63 /* Pods-Surveys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surveys.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surveys/Pods-Surveys.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6453F78BF0C4DEBBDC458CF /* libPods-Surveys.a in Frameworks */,
+				6ED0DA5D475D7F563B321D02 /* Pods_Surveys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD4B0E68BB600590B1A2ED0B /* libPods-SurveysTests.a in Frameworks */,
+				CE048620C57E81E7D05D1F22 /* Pods_SurveysTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +150,6 @@
 				434F2CEF22A7F63B00DE01A9 /* Controllers */,
 				434F2CF022A7F64900DE01A9 /* Extensions */,
 				434F2CF122A7F64E00DE01A9 /* Models */,
-				434F2CF222A7F65400DE01A9 /* Protocols */,
 				434F2CF322A7F65A00DE01A9 /* Services */,
 				434F2CF422A7F66100DE01A9 /* Views */,
 			);
@@ -177,6 +192,8 @@
 				437E1CB922ABF87600AA5817 /* Date.swift */,
 				437E1CBB22ABF8BE00AA5817 /* Collection.swift */,
 				437E1CC522AC15B900AA5817 /* URLRequest.swift */,
+				437E1CCF22AC1C8E00AA5817 /* UIViewController.swift */,
+				437E1CD922AC280600AA5817 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,15 +201,10 @@
 		434F2CF122A7F64E00DE01A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				437E1CCC22AC1C0000AA5817 /* UseCases */,
+				437E1CC922AC19E000AA5817 /* Entities */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		434F2CF222A7F65400DE01A9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		434F2CF322A7F65A00DE01A9 /* Services */ = {
@@ -227,6 +239,7 @@
 				434F2D0222A8020D00DE01A9 /* App.Color.swift */,
 				434F2D0422A802F200DE01A9 /* App.String.swift */,
 				437E1CAB22AB32F800AA5817 /* App.Measure.swift */,
+				437E1CDD22AC295700AA5817 /* App.Error.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -245,6 +258,7 @@
 			children = (
 				434F2CF922A7F6FC00DE01A9 /* SurveysViewController.swift */,
 				434F2CFA22A7F6FC00DE01A9 /* SurveysViewController.xib */,
+				437E1CC722AC19CD00AA5817 /* SurveysViewModel.swift */,
 			);
 			path = Surveys;
 			sourceTree = "<group>";
@@ -252,7 +266,6 @@
 		434F2CFD22A7F70D00DE01A9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				432D625622A6F3F200D6801E /* ViewController.swift */,
 				434F2D0E22A8085600DE01A9 /* NavigationController.swift */,
 			);
 			path = Base;
@@ -263,6 +276,7 @@
 			children = (
 				434F2D0A22A804F400DE01A9 /* SurveyItemCell.swift */,
 				434F2D0B22A804F400DE01A9 /* SurveyItemCell.xib */,
+				437E1CD722AC262900AA5817 /* SurveyItemViewModel.swift */,
 			);
 			path = SurveyItemCell;
 			sourceTree = "<group>";
@@ -278,20 +292,54 @@
 		437E1CB422ABEB2300AA5817 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				437E1CB522ABEB9D00AA5817 /* NimbleTarget.swift */,
+				437E1CD222AC1E3400AA5817 /* Nimble */,
+				437E1CD122AC1E2200AA5817 /* Core */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		437E1CC922AC19E000AA5817 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				437E1CCA22AC1A0000AA5817 /* Survey.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		437E1CCC22AC1C0000AA5817 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				437E1CCD22AC1C0E00AA5817 /* SurveyUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		437E1CD122AC1E2200AA5817 /* Core */ = {
+			isa = PBXGroup;
+			children = (
 				437E1CB722ABF41C00AA5817 /* Token.swift */,
 				437E1CC322AC0B9C00AA5817 /* TokenType.swift */,
 				437E1CC122ABFF4300AA5817 /* MoyaProvider.swift */,
+				437E1CD522AC244E00AA5817 /* Error.swift */,
 			);
-			path = Network;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		437E1CD222AC1E3400AA5817 /* Nimble */ = {
+			isa = PBXGroup;
+			children = (
+				437E1CB522ABEB9D00AA5817 /* NimbleTarget.swift */,
+				437E1CD322AC236800AA5817 /* NimbleNetwork.swift */,
+			);
+			path = Nimble;
 			sourceTree = "<group>";
 		};
 		6ADE5BE07073F453FF9F9B35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3ACAB67BA7757BB7EE6BAE42 /* libPods-Surveys.a */,
-				55F9322E98B2B921D1F090E9 /* libPods-SurveysTests.a */,
 				38143532ECF6AEE2F78788EA /* libPods-SurveysUITests.a */,
+				331EF401BBE7E9B8D35F59E0 /* Pods_Surveys.framework */,
+				354C67882798CAB3B5006EB5 /* Pods_SurveysTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -325,7 +373,7 @@
 				432D624D22A6F3F200D6801E /* Sources */,
 				432D624E22A6F3F200D6801E /* Frameworks */,
 				432D624F22A6F3F200D6801E /* Resources */,
-				69E5F56CC617BF75D6416EAF /* [CP] Copy Pods Resources */,
+				7A78C9B96605AD33CF116816 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +392,7 @@
 				432D626122A6F3F400D6801E /* Sources */,
 				432D626222A6F3F400D6801E /* Frameworks */,
 				432D626322A6F3F400D6801E /* Resources */,
+				0947E7E4AE2CB9FDDE1493BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -415,6 +464,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0947E7E4AE2CB9FDDE1493BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SurveysTests/Pods-SurveysTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SurveysTests/Pods-SurveysTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SurveysTests/Pods-SurveysTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		434F2CEC22A6FA0600DE01A9 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,21 +499,21 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ -s \"${PODS_ROOT}/SwiftLint/swiftlint\" ]]; then\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
 		};
-		69E5F56CC617BF75D6416EAF /* [CP] Copy Pods Resources */ = {
+		7A78C9B96605AD33CF116816 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Surveys/Pods-Surveys-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Surveys/Pods-Surveys-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Surveys/Pods-Surveys-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Surveys/Pods-Surveys-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Surveys/Pods-Surveys-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Surveys/Pods-Surveys-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ACB08796E17547FF6C066E81 /* [CP] Check Pods Manifest.lock */ = {
@@ -502,22 +568,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				434F2CFF22A7F7EF00DE01A9 /* Application.swift in Sources */,
-				432D625722A6F3F200D6801E /* ViewController.swift in Sources */,
+				437E1CCE22AC1C0E00AA5817 /* SurveyUseCase.swift in Sources */,
 				434F2D0522A802F200DE01A9 /* App.String.swift in Sources */,
 				437E1CB322ABE2BA00AA5817 /* ISPageControl.swift in Sources */,
+				437E1CD822AC262900AA5817 /* SurveyItemViewModel.swift in Sources */,
 				437E1CC422AC0B9C00AA5817 /* TokenType.swift in Sources */,
 				437E1CC222ABFF4300AA5817 /* MoyaProvider.swift in Sources */,
+				437E1CC822AC19CD00AA5817 /* SurveysViewModel.swift in Sources */,
+				437E1CDE22AC295700AA5817 /* App.Error.swift in Sources */,
 				432D625522A6F3F200D6801E /* AppDelegate.swift in Sources */,
 				434F2D0F22A8085600DE01A9 /* NavigationController.swift in Sources */,
 				437E1CBC22ABF8BE00AA5817 /* Collection.swift in Sources */,
 				434F2D0C22A804F400DE01A9 /* SurveyItemCell.swift in Sources */,
 				437E1CB622ABEB9D00AA5817 /* NimbleTarget.swift in Sources */,
 				434F2D0122A801FC00DE01A9 /* App.swift in Sources */,
+				437E1CD022AC1C8E00AA5817 /* UIViewController.swift in Sources */,
+				437E1CDA22AC280600AA5817 /* UIImageView.swift in Sources */,
 				437E1CBA22ABF87600AA5817 /* Date.swift in Sources */,
+				437E1CD622AC244E00AA5817 /* Error.swift in Sources */,
 				434F2D0322A8020D00DE01A9 /* App.Color.swift in Sources */,
 				434F2CFB22A7F6FC00DE01A9 /* SurveysViewController.swift in Sources */,
 				437E1CC622AC15B900AA5817 /* URLRequest.swift in Sources */,
+				437E1CCB22AC1A0000AA5817 /* Survey.swift in Sources */,
 				437E1CB822ABF41C00AA5817 /* Token.swift in Sources */,
+				437E1CD422AC236800AA5817 /* NimbleNetwork.swift in Sources */,
 				437E1CAC22AB32F800AA5817 /* App.Measure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
