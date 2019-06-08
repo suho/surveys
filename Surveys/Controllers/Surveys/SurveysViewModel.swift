@@ -27,11 +27,11 @@ extension SurveysViewModel {
         return surveys.count
     }
 
-    func viewModelForItem(at indexPath: IndexPath) throws -> SurveyItemViewModel {
-        guard surveys.indices.contains(indexPath.row) else {
+    func viewModelForItem(at index: Int) throws -> SurveyItemViewModel {
+        guard surveys.indices.contains(index) else {
             throw App.Error.indexOutOfRange
         }
-        return SurveyItemViewModel(survey: surveys[indexPath.row])
+        return SurveyItemViewModel(survey: surveys[index])
     }
 }
 
