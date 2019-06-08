@@ -74,6 +74,11 @@ extension SurveysViewController {
     }
 
     @IBAction private func onPressSurveyButton(_ sender: Any) {
+        let currentIndex = pageControl.currentPage
+        guard let itemViewModel = try? viewModel.viewModelForItem(at: currentIndex) else { return }
+        let controller = SurveyDetailViewController()
+        controller.viewModel = itemViewModel
+        navigationController?.pushViewController(controller)
     }
 }
 
@@ -120,7 +125,7 @@ extension SurveysViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cellViewModel = try? viewModel.viewModelForItem(at: indexPath) else { return UICollectionViewCell() }
+        guard let cellViewModel = try? viewModel.viewModelForItem(at: indexPath.item) else { return UICollectionViewCell() }
         let cell = collectionView.dequeueReusableCell(withClass: SurveyItemCell.self, for: indexPath)
         cell.bind(cellViewModel)
         return cell
