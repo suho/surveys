@@ -15,4 +15,7 @@ extension App {
 // MARK: - App.String
 extension App.String {
     static let takeTheSurvey = "Take the survey"
+    static let surveys = "Surveys"
+    static let surveysApp = "Surveys App"
+    static let authorSuHo = "Author @suho"
 }

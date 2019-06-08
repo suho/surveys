@@ -17,6 +17,7 @@ def util_pods
     pod 'SVProgressHUD'
     pod 'SwifterSwift'
     pod 'Kingfisher'
+    pod 'SnapKit'
 end
 
 target 'Surveys' do
@@ -27,10 +28,6 @@ target 'Surveys' do
   target 'SurveysTests' do
     inherit! :search_paths
     test_pods
-  end
-
-  target 'SurveysUITests' do
-    inherit! :search_paths
   end
 
 end

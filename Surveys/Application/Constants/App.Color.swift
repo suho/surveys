@@ -17,4 +17,6 @@ extension App {
 extension App.Color {
     static let surveyButton: UIColor = UIColor(hex: 0xCA202E) ?? .clear
     static let surveyTitle: UIColor = .white
+    static let barBackground: UIColor = UIColor(red: 20, green: 32, blue: 56) ?? .clear
+    static let barTint: UIColor = .white
 }

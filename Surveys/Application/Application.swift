@@ -17,7 +17,7 @@ final class Application {
     func root(in window: UIWindow?) {
         self.window = window
         let controller = SurveysViewController()
-        let navigation = UINavigationController(rootViewController: controller)
+        let navigation = NavigationController(rootViewController: controller)
         window?.rootViewController = navigation
     }
 }
