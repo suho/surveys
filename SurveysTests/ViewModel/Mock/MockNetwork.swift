@@ -10,13 +10,21 @@ import Foundation
 
 @testable import Surveys
 
-final class MockNetwork: SurveyUseCase {
-
+final class MockNetwork {
     var shouldSuccess: Bool = false
+    var emptyData: Bool = false
+}
 
-    func list(page: Int, perPage: Int, completion: @escaping (Result<[Survey], Error>) -> Void) {
+// MARK: - SurveyUseCase
+extension MockNetwork: SurveyUseCase {
+    func list(page: Int, perPage: Int, completion: @escaping (Result<[Survey], Swift.Error>) -> Void) {
         if shouldSuccess {
-            completion(.success(Survey.list))
+            if emptyData {
+                completion(.success([]))
+            } else {
+                completion(.success(Survey.list))
+            }
+
         } else {
             completion(.failure(MockNetwork.Error.fail))
         }
@@ -36,6 +44,6 @@ extension Survey {
         return Survey(id: "id", title: "title", description: "description", coverImageURL: "coverImageURL")
     }()
     static let list: [Survey] = {
-        return [Survey](repeating: Survey.dummy, count: 5)
+        return [Survey](repeating: Survey.dummy, count: 10)
     }()
 }

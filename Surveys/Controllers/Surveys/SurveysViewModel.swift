@@ -33,6 +33,10 @@ extension SurveysViewModel {
         }
         return SurveyItemViewModel(survey: surveys[index])
     }
+
+    func shouldLoadMore(at indexPath: IndexPath) -> Bool {
+        return indexPath.item == surveys.count - 4 && !shouldNotLoadMore
+    }
 }
 
 // MARK: - Fetch API
@@ -62,10 +66,6 @@ extension SurveysViewModel {
                 completion(.failure(error))
             }
         }
-    }
-
-    func shouldLoadMore(at indexPath: IndexPath) -> Bool {
-        return indexPath.item == surveys.count - 4 && !shouldNotLoadMore
     }
 }
 
