@@ -9,7 +9,7 @@
 ### Prerequisites
 
 - Xcode 10+
-- Swift 4.2
+- Swift 4+
 - Ruby 2.5.1 ([rbenv][rbenv])
 
 ```bash

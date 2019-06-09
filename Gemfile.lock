@@ -215,10 +215,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods
-  fastlane
-  linterbot
-  xcpretty
+  cocoapods (= 1.7.1)
+  fastlane (= 2.125.2)
+  linterbot (= 0.2.7)
+  xcpretty (= 0.3.0)
 
 BUNDLED WITH
    2.0.1
