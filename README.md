@@ -61,5 +61,5 @@ Now, run your project with Xcode and see the demo app
 [rbenv]: https://github.com/rbenv/rbenv
 [cocoapods]: https://cocoapods.org/
 [fastlane]: https://fastlane.tools/
-[travis-img]: https://travis-ci.org/suho/surveys.svg?branch=master
-[travis-url]: https://travis-ci.org/suho/surveys
+[travis-img]: https://travis-ci.com/suho/surveys.svg?branch=master
+[travis-url]: https://travis-ci.com/suho/surveys
