@@ -55,6 +55,7 @@ extension SurveysViewModel {
                 } else {
                     this.surveys = data
                     this.page = 1
+                    this.shouldNotLoadMore = false
                 }
                 completion(.success(data))
             case .failure(let error):
