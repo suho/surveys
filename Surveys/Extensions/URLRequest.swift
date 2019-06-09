@@ -15,8 +15,6 @@ extension URLRequest {
         case .bearer:
             let authValue = type.value + " " + token.token
             addValue(authValue, forHTTPHeaderField: "Authorization")
-        case .none:
-            break
         }
     }
 }

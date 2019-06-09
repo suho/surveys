@@ -9,9 +9,9 @@
 import UIKit
 
 final class SurveyItemCell: UICollectionViewCell {
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     private var didAwake = false
 
     override func awakeFromNib() {

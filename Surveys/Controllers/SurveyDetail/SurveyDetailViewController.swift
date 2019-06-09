@@ -10,9 +10,9 @@ import UIKit
 
 final class SurveyDetailViewController: UIViewController {
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     var viewModel: SurveyItemViewModel!
 
     override func viewDidLoad() {
@@ -21,6 +21,7 @@ final class SurveyDetailViewController: UIViewController {
     }
 
     private func setupUI() {
+        navigationItem.title = viewModel.title
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
         imageView.setImage(with: viewModel.imagePath)

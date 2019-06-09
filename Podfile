@@ -28,6 +28,7 @@ target 'Surveys' do
 
   target 'SurveysTests' do
     inherit! :search_paths
+    dev_pods
     test_pods
   end
 

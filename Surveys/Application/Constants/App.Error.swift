@@ -11,6 +11,7 @@ import Foundation
 extension App {
     enum Error {
         case indexOutOfRange
+        case notFound
     }
 }
 

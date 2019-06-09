@@ -14,6 +14,13 @@ final class Survey {
     let description: String
     let coverImageURL: String
 
+    init(id: String, title: String, description: String, coverImageURL: String) {
+        self.id = id
+        self.title = title
+        self.description = description
+        self.coverImageURL = coverImageURL
+    }
+
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(String.self, forKey: .id) ?? ""
