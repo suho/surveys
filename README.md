@@ -3,13 +3,15 @@
 
 ## Overview
 
-- Create an application that allows users to browse a list of surveys. For the UI, the application should look like the above screen.
+- Create an application that allows users to browse a list of surveys. 
 - Integrate with an API to retrieve data.
+- Write unit tests.
 
 ### Prerequisites
 
 - Xcode 10+
 - Swift 4+
+- Target iOS >= 10.0
 - Ruby 2.5.1 ([rbenv][rbenv])
 
 ```bash
