@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431034ED22ACD38A0028DADC /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431034EC22ACD38A0028DADC /* MockNetwork.swift */; };
+		431034F122ACD8170028DADC /* SurveysViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431034F022ACD8170028DADC /* SurveysViewModelTests.swift */; };
 		432D625522A6F3F200D6801E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D625422A6F3F200D6801E /* AppDelegate.swift */; };
 		432D625C22A6F3F400D6801E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432D625B22A6F3F400D6801E /* Assets.xcassets */; };
 		432D625F22A6F3F400D6801E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432D625D22A6F3F400D6801E /* LaunchScreen.storyboard */; };
@@ -61,6 +63,8 @@
 		331EF401BBE7E9B8D35F59E0 /* Pods_Surveys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surveys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		354C67882798CAB3B5006EB5 /* Pods_SurveysTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveysTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38143532ECF6AEE2F78788EA /* libPods-SurveysUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SurveysUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		431034EC22ACD38A0028DADC /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
+		431034F022ACD8170028DADC /* SurveysViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModelTests.swift; sourceTree = "<group>"; };
 		432D625122A6F3F200D6801E /* Surveys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surveys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432D625422A6F3F200D6801E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		432D625B22A6F3F400D6801E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,8 +167,9 @@
 		432D626822A6F3F400D6801E /* SurveysTests */ = {
 			isa = PBXGroup;
 			children = (
+				437E1CE522AC44CA00AA5817 /* ViewModel */,
+				437E1CE422AC44C200AA5817 /* Infos */,
 				432D626922A6F3F400D6801E /* SurveysTests.swift */,
-				432D626B22A6F3F400D6801E /* Info.plist */,
 			);
 			path = SurveysTests;
 			sourceTree = "<group>";
@@ -346,6 +351,31 @@
 				437E1CE122AC3CF800AA5817 /* SurveyDetailViewController.xib */,
 			);
 			path = SurveyDetail;
+			sourceTree = "<group>";
+		};
+		437E1CE422AC44C200AA5817 /* Infos */ = {
+			isa = PBXGroup;
+			children = (
+				432D626B22A6F3F400D6801E /* Info.plist */,
+			);
+			path = Infos;
+			sourceTree = "<group>";
+		};
+		437E1CE522AC44CA00AA5817 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				437E1CE622AC44E700AA5817 /* Mock */,
+				431034F022ACD8170028DADC /* SurveysViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		437E1CE622AC44E700AA5817 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				431034EC22ACD38A0028DADC /* MockNetwork.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		6ADE5BE07073F453FF9F9B35 /* Frameworks */ = {
@@ -616,6 +646,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431034F122ACD8170028DADC /* SurveysViewModelTests.swift in Sources */,
+				431034ED22ACD38A0028DADC /* MockNetwork.swift in Sources */,
 				432D626A22A6F3F400D6801E /* SurveysTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,7 +833,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SurveysTests/Info.plist;
+				INFOPLIST_FILE = SurveysTests/Infos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -822,7 +854,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SurveysTests/Info.plist;
+				INFOPLIST_FILE = SurveysTests/Infos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

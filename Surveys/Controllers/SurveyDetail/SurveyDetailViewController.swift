@@ -21,6 +21,7 @@ final class SurveyDetailViewController: UIViewController {
     }
 
     private func setupUI() {
+        navigationItem.title = viewModel.title
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
         imageView.setImage(with: viewModel.imagePath)

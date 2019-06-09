@@ -9,7 +9,7 @@
 import XCTest
 @testable import Surveys
 
-class SurveysTests: XCTestCase {
+final class SurveysTests: XCTestCase {
 
     func testExample() {
     }
