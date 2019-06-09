@@ -9,12 +9,10 @@
 import Foundation
 
 enum TokenType: String {
-    case none
     case bearer
 
     var value: String {
         switch self {
-        case .none: return "none"
         case .bearer: return "Bearer"
         }
     }
@@ -24,7 +22,7 @@ enum TokenType: String {
 extension TokenType {
     init(value: String) {
         guard let type = TokenType(rawValue: value) else {
-            self = .none
+            self = .bearer
             return
         }
         self = type

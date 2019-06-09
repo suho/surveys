@@ -58,10 +58,6 @@ extension NimbleTarget: TargetType {
         }
     }
 
-    var sampleData: Data {
-        return Data()
-    }
-
     var task: Task {
         switch self {
         case .credentials:
@@ -75,5 +71,22 @@ extension NimbleTarget: TargetType {
 
     var headers: [String: String]? {
         return ["Content-Type": "application/json"]
+    }
+}
+
+// MARK: - For Unit Testing
+extension NimbleTarget {
+    var sampleData: Data {
+        switch self {
+        case .credentials:
+            if let data = try? Data(forResource: "Token-Success", withExtension: "json") {
+                return data
+            }
+        case .surveys:
+            if let data = try? Data(forResource: "Surveys-Success", withExtension: "json") {
+                return data
+            }
+        }
+        return Data()
     }
 }
