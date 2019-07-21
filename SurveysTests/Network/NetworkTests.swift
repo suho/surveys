@@ -118,6 +118,25 @@ final class NetworkTests: QuickSpec {
     }
 }
 
+// MARK: - SampleData For Testing
+extension NimbleTarget {
+    var sampleData: Data {
+        switch self {
+        case .credentials:
+            if let url = Bundle(for: NetworkTests.self).url(forResource: "Token-Success", withExtension: "json"),
+                let data = try? Data(contentsOf: url) {
+                return data
+            }
+        case .surveys:
+            if let url = Bundle(for: NetworkTests.self).url(forResource: "Surveys-Success", withExtension: "json"),
+                let data = try? Data(contentsOf: url) {
+                return data
+            }
+        }
+        return Data()
+    }
+}
+
 // MARK: - Configuration
 extension NetworkTests {
     enum Configuration {
