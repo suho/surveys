@@ -21,7 +21,7 @@ final class SurveysViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData(shouldLoadMore: false)
+        setupViewModel()
         setupUI()
     }
 
@@ -31,28 +31,15 @@ final class SurveysViewController: UIViewController {
         setupPageControl()
         setupSurveyButton()
     }
+
+    private func setupViewModel() {
+        viewModel.delegate = self
+        viewModel.fetch()
+    }
 }
 
 // MARK: - Action
 extension SurveysViewController {
-    private func loadData(shouldLoadMore: Bool) {
-        if !shouldLoadMore { SVProgressHUD.show() }
-        viewModel.fetch(shouldLoadMore: shouldLoadMore) { [weak self] result in
-            if !shouldLoadMore { SVProgressHUD.popActivity() }
-            guard let this = self else { return }
-            switch result {
-            case .failure(let error):
-                this.showError(error)
-            case .success:
-                if shouldLoadMore {
-                    this.updateUI()
-                } else {
-                    this.refreshUI()
-                }
-            }
-        }
-    }
-
     private func updateUI() {
         collectionView.reloadData()
         pageControl.numberOfPages = viewModel.numberOfItems(in: 0)
@@ -66,7 +53,7 @@ extension SurveysViewController {
     }
 
     @objc private func onPressRefreshButton() {
-        loadData(shouldLoadMore: false)
+        viewModel.fetch()
     }
 
     @objc private func onPressMenuButton() {
@@ -118,6 +105,26 @@ extension SurveysViewController {
     }
 }
 
+// MARK: - SurveysViewModelDelegate
+extension SurveysViewController: SurveysViewModelDelegate {
+    func viewModel(_ viewModel: SurveysViewModel, performAction action: SurveysViewModel.Action) {
+        switch action {
+        case .didFetch:
+            refreshUI()
+        case .didLoadMore:
+            updateUI()
+        case .didFail(let error):
+            showError(error)
+        case .showLoading(let isLoading):
+            if isLoading {
+                SVProgressHUD.show()
+            } else {
+                SVProgressHUD.popActivity()
+            }
+        }
+    }
+}
+
 // MARK: - UICollectionViewDataSource
 extension SurveysViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -142,7 +149,7 @@ extension SurveysViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if viewModel.shouldLoadMore(at: indexPath) {
-            loadData(shouldLoadMore: true)
+            viewModel.loadMore()
         }
     }
 }

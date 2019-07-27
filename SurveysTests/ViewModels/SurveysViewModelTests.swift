@@ -49,14 +49,13 @@ final class SurveysViewModelTests: QuickSpec {
 
             it("Data After Fetch API Success But Empty Data Testing", closure: {
                 waitUntil(timeout: Configuration.timeout, action: { done in
-                    viewModel.fetch(shouldLoadMore: true, completion: { _ in
+                    viewModel.loadMore {
                         expect(viewModel.numberOfItems(in: 0)) == 0
-                        expect {
-                            try viewModel.viewModelForItem(at: 0)
-                            }.to(throwError(App.Error.indexOutOfRange))
+                        expect { try viewModel.viewModelForItem(at: 0) }
+                            .to(throwError(App.Error.indexOutOfRange))
                         expect(viewModel.shouldLoadMore(at: Configuration.firstIndexPath)) == false
                         done()
-                    })
+                    }
                 })
             })
         })
@@ -72,14 +71,14 @@ final class SurveysViewModelTests: QuickSpec {
 
             it("Data After Fetch API Failure Testing", closure: {
                 waitUntil(timeout: Configuration.timeout, action: { done in
-                    viewModel.fetch(shouldLoadMore: true, completion: { _ in
+                    viewModel.loadMore {
                         expect(viewModel.numberOfItems(in: 0)) == 0
                         expect {
                             try viewModel.viewModelForItem(at: 0)
                             }.to(throwError(App.Error.indexOutOfRange))
                         expect(viewModel.shouldLoadMore(at: Configuration.firstIndexPath)) == false
                         done()
-                    })
+                    }
                 })
             })
         })
@@ -95,7 +94,7 @@ final class SurveysViewModelTests: QuickSpec {
 
             it("Data After Fetch API Success Testing", closure: {
                 waitUntil(timeout: Configuration.timeout, action: { done in
-                    viewModel.fetch(shouldLoadMore: false, completion: { _ in
+                    viewModel.fetch {
                         expect(viewModel.numberOfItems(in: 0)) == 10
                         expect {
                             try viewModel.viewModelForItem(at: 0)
@@ -103,13 +102,13 @@ final class SurveysViewModelTests: QuickSpec {
                         expect(viewModel.shouldLoadMore(at: Configuration.firstIndexPath)) == false
                         expect(viewModel.shouldLoadMore(at: Configuration.sixthIndexPath)) == true
                         done()
-                    })
+                    }
                 })
             })
 
             it("Data After Fetch API Loadmore Success Testing", closure: {
                 waitUntil(timeout: Configuration.timeout, action: { done in
-                    viewModel.fetch(shouldLoadMore: true, completion: { _ in
+                    viewModel.loadMore {
                         expect(viewModel.numberOfItems(in: 0)) == 10
                         expect {
                             try viewModel.viewModelForItem(at: 0)
@@ -117,7 +116,7 @@ final class SurveysViewModelTests: QuickSpec {
                         expect(viewModel.shouldLoadMore(at: Configuration.firstIndexPath)) == false
                         expect(viewModel.shouldLoadMore(at: Configuration.sixthIndexPath)) == true
                         done()
-                    })
+                    }
                 })
             })
         })
