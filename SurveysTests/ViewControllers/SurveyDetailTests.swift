@@ -17,12 +17,12 @@ final class SurveyDetailTests: QuickSpec {
         let viewModel = SurveyItemViewModel(survey: survey)
         let controller = SurveyDetailViewController()
         controller.viewModel = viewModel
-        describe("Load View") {
-            context("Init Data After Load View") {
+        describe("A survey detail view controller") {
+            context("when initializing with view model") {
                 beforeEach {
                     controller.loadViewIfNeeded()
                 }
-                it("Data After Init Testing") {
+                it("has value for each properties as expected") {
                     expect(controller.titleLabel.text) == "title"
                     expect(controller.descriptionLabel.text) == "description"
                 }

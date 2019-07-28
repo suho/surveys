@@ -53,6 +53,8 @@
 		437E1CE322AC3CF800AA5817 /* SurveyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437E1CE122AC3CF800AA5817 /* SurveyDetailViewController.xib */; };
 		43C4A7A822E4259500D6FB8C /* Token-Success.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C4A7A722E4259500D6FB8C /* Token-Success.json */; };
 		43C4A7AA22E425B800D6FB8C /* Surveys-Success.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C4A7A922E425B800D6FB8C /* Surveys-Success.json */; };
+		43D826F322ED860D0012A995 /* CollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D826F222ED860D0012A995 /* CollectionTests.swift */; };
+		43D826F622ED88600012A995 /* SurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D826F522ED88600012A995 /* SurveyTests.swift */; };
 		6ED0DA5D475D7F563B321D02 /* Pods_Surveys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331EF401BBE7E9B8D35F59E0 /* Pods_Surveys.framework */; };
 		CE048620C57E81E7D05D1F22 /* Pods_SurveysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354C67882798CAB3B5006EB5 /* Pods_SurveysTests.framework */; };
 /* End PBXBuildFile section */
@@ -124,6 +126,8 @@
 		437E1CE122AC3CF800AA5817 /* SurveyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyDetailViewController.xib; sourceTree = "<group>"; };
 		43C4A7A722E4259500D6FB8C /* Token-Success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Token-Success.json"; sourceTree = "<group>"; };
 		43C4A7A922E425B800D6FB8C /* Surveys-Success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Surveys-Success.json"; sourceTree = "<group>"; };
+		43D826F222ED860D0012A995 /* CollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionTests.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/SurveysTests/Extensions/CollectionTests.swift; sourceTree = "<group>"; };
+		43D826F522ED88600012A995 /* SurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SurveyTests.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/SurveysTests/Model/SurveyTests.swift; sourceTree = "<group>"; };
 		47B91FB5FF43AE457AD47A0D /* Pods-SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveysTests/Pods-SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
 		620B9D8F7530AB3A3E5DDA0D /* Pods-Surveys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surveys.release.xcconfig"; path = "Target Support Files/Pods-Surveys/Pods-Surveys.release.xcconfig"; sourceTree = "<group>"; };
 		AFED79AD0DC0BA6D03837BDF /* Pods-SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.debug.xcconfig"; path = "Target Support Files/Pods-SurveysTests/Pods-SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 		432D626822A6F3F400D6801E /* SurveysTests */ = {
 			isa = PBXGroup;
 			children = (
+				43D826F422ED884F0012A995 /* Model */,
+				43D826F122ED85F30012A995 /* Extensions */,
 				43338F4F22AD46190008F52A /* ViewControllers */,
 				43338F4122ACEA9E0008F52A /* Network */,
 				437E1CE522AC44CA00AA5817 /* ViewModels */,
@@ -441,6 +447,22 @@
 				43C4A7A922E425B800D6FB8C /* Surveys-Success.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		43D826F122ED85F30012A995 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43D826F222ED860D0012A995 /* CollectionTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		43D826F422ED884F0012A995 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43D826F522ED88600012A995 /* SurveyTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6ADE5BE07073F453FF9F9B35 /* Frameworks */ = {
@@ -724,7 +746,9 @@
 				43338F5122AD467B0008F52A /* SurveyDetailTests.swift in Sources */,
 				43338F4522ACEB180008F52A /* NetworkTests.swift in Sources */,
 				43338F5622AD495E0008F52A /* SurveysControllerTests.swift in Sources */,
+				43D826F622ED88600012A995 /* SurveyTests.swift in Sources */,
 				431034ED22ACD38A0028DADC /* MockNetwork.swift in Sources */,
+				43D826F322ED860D0012A995 /* CollectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,4 +26,14 @@ extension UICollectionView {
         }
         return cell
     }
+
+    func numberOfItems() -> Int {
+        var section = 0
+        var itemsCount = 0
+        while section < numberOfSections {
+            itemsCount += numberOfItems(inSection: section)
+            section += 1
+        }
+        return itemsCount
+    }
 }
