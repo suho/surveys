@@ -1,5 +1,5 @@
 //
-//  App.Error.swift
+//  Constants.Error.swift
 //  Surveys
 //
 //  Created by Su Ho V. on 6/9/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension App {
+extension Constants {
     enum Error {
         case indexOutOfRange
         case notFound
@@ -16,4 +16,4 @@ extension App {
 }
 
 // MARK: - Error
-extension App.Error: Error {}
+extension Constants.Error: Swift.Error {}

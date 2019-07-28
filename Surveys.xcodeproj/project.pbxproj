@@ -20,13 +20,12 @@
 		434F2CFB22A7F6FC00DE01A9 /* SurveysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2CF922A7F6FC00DE01A9 /* SurveysViewController.swift */; };
 		434F2CFC22A7F6FC00DE01A9 /* SurveysViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434F2CFA22A7F6FC00DE01A9 /* SurveysViewController.xib */; };
 		434F2CFF22A7F7EF00DE01A9 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2CFE22A7F7EF00DE01A9 /* Application.swift */; };
-		434F2D0122A801FC00DE01A9 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0022A801FC00DE01A9 /* App.swift */; };
-		434F2D0322A8020D00DE01A9 /* App.Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0222A8020D00DE01A9 /* App.Color.swift */; };
-		434F2D0522A802F200DE01A9 /* App.String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0422A802F200DE01A9 /* App.String.swift */; };
+		434F2D0322A8020D00DE01A9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0222A8020D00DE01A9 /* Color.swift */; };
+		434F2D0522A802F200DE01A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0422A802F200DE01A9 /* Constants.swift */; };
 		434F2D0C22A804F400DE01A9 /* SurveyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0A22A804F400DE01A9 /* SurveyItemCell.swift */; };
 		434F2D0D22A804F400DE01A9 /* SurveyItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434F2D0B22A804F400DE01A9 /* SurveyItemCell.xib */; };
 		434F2D0F22A8085600DE01A9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F2D0E22A8085600DE01A9 /* NavigationController.swift */; };
-		437E1CAC22AB32F800AA5817 /* App.Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CAB22AB32F800AA5817 /* App.Measure.swift */; };
+		437E1CAC22AB32F800AA5817 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CAB22AB32F800AA5817 /* Measure.swift */; };
 		437E1CB322ABE2BA00AA5817 /* ISPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CB222ABE2BA00AA5817 /* ISPageControl.swift */; };
 		437E1CB622ABEB9D00AA5817 /* NimbleTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CB522ABEB9D00AA5817 /* NimbleTarget.swift */; };
 		437E1CB822ABF41C00AA5817 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CB722ABF41C00AA5817 /* Token.swift */; };
@@ -42,7 +41,7 @@
 		437E1CD622AC244E00AA5817 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CD522AC244E00AA5817 /* Error.swift */; };
 		437E1CD822AC262900AA5817 /* SurveyItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CD722AC262900AA5817 /* SurveyItemViewModel.swift */; };
 		437E1CDA22AC280600AA5817 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CD922AC280600AA5817 /* UIImageView.swift */; };
-		437E1CDE22AC295700AA5817 /* App.Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CDD22AC295700AA5817 /* App.Error.swift */; };
+		437E1CDE22AC295700AA5817 /* Constants.Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CDD22AC295700AA5817 /* Constants.Error.swift */; };
 		437E1CE222AC3CF800AA5817 /* SurveyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E1CE022AC3CF800AA5817 /* SurveyDetailViewController.swift */; };
 		437E1CE322AC3CF800AA5817 /* SurveyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437E1CE122AC3CF800AA5817 /* SurveyDetailViewController.xib */; };
 		43C4A7A822E4259500D6FB8C /* Token-Success.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C4A7A722E4259500D6FB8C /* Token-Success.json */; };
@@ -85,13 +84,12 @@
 		434F2CF922A7F6FC00DE01A9 /* SurveysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewController.swift; sourceTree = "<group>"; };
 		434F2CFA22A7F6FC00DE01A9 /* SurveysViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveysViewController.xib; sourceTree = "<group>"; };
 		434F2CFE22A7F7EF00DE01A9 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		434F2D0022A801FC00DE01A9 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		434F2D0222A8020D00DE01A9 /* App.Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.Color.swift; sourceTree = "<group>"; };
-		434F2D0422A802F200DE01A9 /* App.String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.String.swift; sourceTree = "<group>"; };
+		434F2D0222A8020D00DE01A9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		434F2D0422A802F200DE01A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		434F2D0A22A804F400DE01A9 /* SurveyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemCell.swift; sourceTree = "<group>"; };
 		434F2D0B22A804F400DE01A9 /* SurveyItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyItemCell.xib; sourceTree = "<group>"; };
 		434F2D0E22A8085600DE01A9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		437E1CAB22AB32F800AA5817 /* App.Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.Measure.swift; sourceTree = "<group>"; };
+		437E1CAB22AB32F800AA5817 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		437E1CB222ABE2BA00AA5817 /* ISPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPageControl.swift; sourceTree = "<group>"; };
 		437E1CB522ABEB9D00AA5817 /* NimbleTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleTarget.swift; sourceTree = "<group>"; };
 		437E1CB722ABF41C00AA5817 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -107,7 +105,7 @@
 		437E1CD522AC244E00AA5817 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		437E1CD722AC262900AA5817 /* SurveyItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewModel.swift; sourceTree = "<group>"; };
 		437E1CD922AC280600AA5817 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		437E1CDD22AC295700AA5817 /* App.Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.Error.swift; sourceTree = "<group>"; };
+		437E1CDD22AC295700AA5817 /* Constants.Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.Error.swift; sourceTree = "<group>"; };
 		437E1CE022AC3CF800AA5817 /* SurveyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailViewController.swift; sourceTree = "<group>"; };
 		437E1CE122AC3CF800AA5817 /* SurveyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyDetailViewController.xib; sourceTree = "<group>"; };
 		43C4A7A722E4259500D6FB8C /* Token-Success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Token-Success.json"; sourceTree = "<group>"; };
@@ -274,11 +272,10 @@
 		434F2CF622A7F69A00DE01A9 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				434F2D0022A801FC00DE01A9 /* App.swift */,
-				434F2D0222A8020D00DE01A9 /* App.Color.swift */,
-				434F2D0422A802F200DE01A9 /* App.String.swift */,
-				437E1CAB22AB32F800AA5817 /* App.Measure.swift */,
-				437E1CDD22AC295700AA5817 /* App.Error.swift */,
+				434F2D0222A8020D00DE01A9 /* Color.swift */,
+				434F2D0422A802F200DE01A9 /* Constants.swift */,
+				437E1CAB22AB32F800AA5817 /* Measure.swift */,
+				437E1CDD22AC295700AA5817 /* Constants.Error.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -655,31 +652,30 @@
 			files = (
 				434F2CFF22A7F7EF00DE01A9 /* Application.swift in Sources */,
 				437E1CCE22AC1C0E00AA5817 /* SurveyUseCase.swift in Sources */,
-				434F2D0522A802F200DE01A9 /* App.String.swift in Sources */,
+				434F2D0522A802F200DE01A9 /* Constants.swift in Sources */,
 				437E1CB322ABE2BA00AA5817 /* ISPageControl.swift in Sources */,
 				437E1CD822AC262900AA5817 /* SurveyItemViewModel.swift in Sources */,
 				437E1CC422AC0B9C00AA5817 /* TokenType.swift in Sources */,
 				437E1CC222ABFF4300AA5817 /* MoyaProvider.swift in Sources */,
 				43338F4D22AD3A590008F52A /* Data.swift in Sources */,
 				437E1CC822AC19CD00AA5817 /* SurveysViewModel.swift in Sources */,
-				437E1CDE22AC295700AA5817 /* App.Error.swift in Sources */,
+				437E1CDE22AC295700AA5817 /* Constants.Error.swift in Sources */,
 				432D625522A6F3F200D6801E /* AppDelegate.swift in Sources */,
 				434F2D0F22A8085600DE01A9 /* NavigationController.swift in Sources */,
 				437E1CBC22ABF8BE00AA5817 /* Collection.swift in Sources */,
 				437E1CE222AC3CF800AA5817 /* SurveyDetailViewController.swift in Sources */,
 				434F2D0C22A804F400DE01A9 /* SurveyItemCell.swift in Sources */,
 				437E1CB622ABEB9D00AA5817 /* NimbleTarget.swift in Sources */,
-				434F2D0122A801FC00DE01A9 /* App.swift in Sources */,
 				437E1CD022AC1C8E00AA5817 /* UIViewController.swift in Sources */,
 				437E1CDA22AC280600AA5817 /* UIImageView.swift in Sources */,
 				437E1CD622AC244E00AA5817 /* Error.swift in Sources */,
-				434F2D0322A8020D00DE01A9 /* App.Color.swift in Sources */,
+				434F2D0322A8020D00DE01A9 /* Color.swift in Sources */,
 				434F2CFB22A7F6FC00DE01A9 /* SurveysViewController.swift in Sources */,
 				437E1CC622AC15B900AA5817 /* URLRequest.swift in Sources */,
 				437E1CCB22AC1A0000AA5817 /* Survey.swift in Sources */,
 				437E1CB822ABF41C00AA5817 /* Token.swift in Sources */,
 				437E1CD422AC236800AA5817 /* NimbleNetwork.swift in Sources */,
-				437E1CAC22AB32F800AA5817 /* App.Measure.swift in Sources */,
+				437E1CAC22AB32F800AA5817 /* Measure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

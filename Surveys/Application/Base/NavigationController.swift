@@ -20,8 +20,8 @@ final class NavigationController: UINavigationController {
     }
 
     private func setupAppearance() {
-        navigationBar.barTintColor = App.Color.barBackground
-        navigationBar.tintColor = App.Color.barTint
-        navigationBar.titleTextAttributes = [.foregroundColor: App.Color.barTint]
+        navigationBar.barTintColor = .whaleBlue
+        navigationBar.tintColor = .white
+        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }

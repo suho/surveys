@@ -57,7 +57,7 @@ extension SurveysViewController {
     }
 
     @objc private func onPressMenuButton() {
-        showAlert(title: App.String.surveysApp, message: App.String.authorSuHo)
+        showAlert(title: Constants.surveysApp, message: Constants.authorSuHo)
     }
 
     @IBAction private func onPressSurveyButton(_ sender: Any) {
@@ -72,7 +72,7 @@ extension SurveysViewController {
 // MARK: - Setup UI
 extension SurveysViewController {
     private func setupNavigationBar() {
-        navigationItem.title = App.String.surveys.uppercased()
+        navigationItem.title = Constants.surveys.uppercased()
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(onPressRefreshButton))
         navigationItem.setLeftBarButton(refresh, animated: false)
         let menu = UIBarButtonItem(image: UIImage(named: "ic-menu"), style: .plain, target: self, action: #selector(onPressMenuButton))
@@ -80,7 +80,7 @@ extension SurveysViewController {
     }
 
     private func setupCollectionView() {
-        collectionView.backgroundColor = App.Color.barBackground
+        collectionView.backgroundColor = UIColor.whaleBlue
         collectionView.register(nibWithCellClass: SurveyItemCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -91,7 +91,7 @@ extension SurveysViewController {
 
     private func setupPageControl() {
         pageContainer.snp.makeConstraints { (maker) in
-            maker.trailingMargin.equalTo((App.Measure.screenSize.width - pageControl.height) / 2)
+            maker.trailingMargin.equalTo((Measure.screenSize.width - pageControl.height) / 2)
         }
         pageContainer.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
     }
@@ -99,9 +99,9 @@ extension SurveysViewController {
     private func setupSurveyButton() {
         surveyButton.isHidden = true
         surveyButton.titleLabel?.font = UIFont.systemFont(ofSize: Configuration.surveyFontSize)
-        surveyButton.titleLabel?.textColor = App.Color.surveyTitle
-        surveyButton.backgroundColor = App.Color.surveyButton
-        surveyButton.titleLabel?.text = App.String.takeTheSurvey
+        surveyButton.titleLabel?.textColor = .white
+        surveyButton.backgroundColor = .cardinalRed
+        surveyButton.titleLabel?.text = Constants.takeTheSurvey
     }
 }
 
@@ -159,7 +159,7 @@ extension SurveysViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return App.Measure.screenSize
+        return Measure.screenSize
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -176,8 +176,16 @@ extension SurveysViewController {
         static let controlSize: CGSize = CGSize(width: 7, height: 7)
         static func contentInset(with bar: UINavigationBar) -> UIEdgeInsets {
             let navigationBarHeight = bar.height
-            let statusBarHeight = App.Measure.statusBarHeight
+            let statusBarHeight = Measure.statusBarHeight
             return .init(top: -navigationBarHeight - statusBarHeight, left: 0, bottom: 0, right: 0)
         }
     }
+}
+
+// MARK: - Constants
+private extension Constants {
+    static let surveys = "Surveys"
+    static let surveysApp = "Surveys App"
+    static let authorSuHo = "Author @suho"
+    static let takeTheSurvey = "Take the survey"
 }

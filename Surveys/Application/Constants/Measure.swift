@@ -1,5 +1,5 @@
 //
-//  App.Measure.swift
+//  Measure.swift
 //  Surveys
 //
 //  Created by Su Ho V. on 6/8/19.
@@ -8,12 +8,7 @@
 
 import UIKit
 
-extension App {
-    enum Measure {}
-}
-
-// MARK: - App.Measure
-extension App.Measure {
+enum Measure {
     static let screenSize: CGSize = UIScreen.main.bounds.size
     static let navigationBarHeight = UINavigationBar.appearance().height
     static let statusBarHeight = UIApplication.shared.statusBarFrame.height

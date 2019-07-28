@@ -10,6 +10,10 @@ import UIKit
 
 extension UIViewController {
     func showError(_ error: Error) {
-        showAlert(title: App.String.surveys, message: error.localizedDescription)
+        showAlert(title: Constants.surveys, message: error.localizedDescription)
     }
+}
+
+private extension Constants {
+    static let surveys = "Surveys"
 }

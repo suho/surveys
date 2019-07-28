@@ -34,7 +34,7 @@ extension SurveysViewModel {
 
     func viewModelForItem(at index: Int) throws -> SurveyItemViewModel {
         guard surveys.indices.contains(index) else {
-            throw App.Error.indexOutOfRange
+            throw Constants.Error.indexOutOfRange
         }
         return SurveyItemViewModel(survey: surveys[index])
     }

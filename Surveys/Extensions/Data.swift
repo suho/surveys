@@ -10,7 +10,7 @@ import Foundation
 
 extension Data {
     init(forResource name: String, withExtension ext: String) throws {
-        guard let url = Bundle.main.url(forResource: name, withExtension: ext) else { throw App.Error.notFound }
+        guard let url = Bundle.main.url(forResource: name, withExtension: ext) else { throw Constants.Error.notFound }
         try self.init(contentsOf: url)
     }
 }
