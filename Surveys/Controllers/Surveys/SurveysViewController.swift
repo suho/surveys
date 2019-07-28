@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import SwifterSwift
-import SnapKit
-import SVProgressHUD
 
 final class SurveysViewController: UIViewController {
 
@@ -65,7 +62,7 @@ extension SurveysViewController {
         guard let itemViewModel = try? viewModel.viewModelForItem(at: currentIndex) else { return }
         let controller = SurveyDetailViewController()
         controller.viewModel = itemViewModel
-        navigationController?.pushViewController(controller)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -90,9 +87,12 @@ extension SurveysViewController {
     }
 
     private func setupPageControl() {
-        pageContainer.snp.makeConstraints { (maker) in
-            maker.trailingMargin.equalTo((Measure.screenSize.width - pageControl.height) / 2)
-        }
+        let trailingConstant = (Measure.screenSize.width - pageControl.height) / 2
+        let trailingAnchor = pageContainer
+            .trailingAnchor
+            .constraint(equalTo: view.trailingAnchor,
+                        constant: trailingConstant)
+        trailingAnchor.isActive = true
         pageContainer.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
     }
 
@@ -117,9 +117,9 @@ extension SurveysViewController: SurveysViewModelDelegate {
             showError(error)
         case .showLoading(let isLoading):
             if isLoading {
-                SVProgressHUD.show()
+                ProgressView.show()
             } else {
-                SVProgressHUD.popActivity()
+                ProgressView.hide()
             }
         }
     }

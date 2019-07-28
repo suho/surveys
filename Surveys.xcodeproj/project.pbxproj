@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430D617422ED7243006E0047 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D617322ED7243006E0047 /* String.swift */; };
+		430D617622ED7326006E0047 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D617522ED7326006E0047 /* UIColor.swift */; };
+		430D617822ED7409006E0047 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D617722ED7409006E0047 /* UIView.swift */; };
+		430D617A22ED7454006E0047 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D617922ED7454006E0047 /* Date.swift */; };
+		430D617C22ED74CF006E0047 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D617B22ED74CF006E0047 /* UICollectionView.swift */; };
+		430D617F22ED7550006E0047 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D617E22ED7550006E0047 /* ProgressView.swift */; };
+		430D618122ED757F006E0047 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430D618022ED757F006E0047 /* ProgressView.xib */; };
 		431034ED22ACD38A0028DADC /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431034EC22ACD38A0028DADC /* MockNetwork.swift */; };
 		431034F122ACD8170028DADC /* SurveysViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431034F022ACD8170028DADC /* SurveysViewModelTests.swift */; };
 		432D625522A6F3F200D6801E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D625422A6F3F200D6801E /* AppDelegate.swift */; };
@@ -67,6 +74,13 @@
 		331EF401BBE7E9B8D35F59E0 /* Pods_Surveys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surveys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		354C67882798CAB3B5006EB5 /* Pods_SurveysTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveysTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38143532ECF6AEE2F78788EA /* libPods-SurveysUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SurveysUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		430D617322ED7243006E0047 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/Surveys/Extensions/String.swift; sourceTree = "<group>"; };
+		430D617522ED7326006E0047 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/Surveys/Extensions/UIColor.swift; sourceTree = "<group>"; };
+		430D617722ED7409006E0047 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/Surveys/Extensions/UIView.swift; sourceTree = "<group>"; };
+		430D617922ED7454006E0047 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Date.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/Surveys/Extensions/Date.swift; sourceTree = "<group>"; };
+		430D617B22ED74CF006E0047 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UICollectionView.swift; path = ../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/Surveys/Extensions/UICollectionView.swift; sourceTree = "<group>"; };
+		430D617E22ED7550006E0047 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = ../../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/Surveys/Views/ProgressView/ProgressView.swift; sourceTree = "<group>"; };
+		430D618022ED757F006E0047 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressView.xib; path = ../../../../../../../../../../System/Volumes/Data/Users/mlsuho/me/repos/suho/github/surveys/Surveys/Views/ProgressView/ProgressView.xib; sourceTree = "<group>"; };
 		431034EC22ACD38A0028DADC /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		431034F022ACD8170028DADC /* SurveysViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModelTests.swift; sourceTree = "<group>"; };
 		432D625122A6F3F200D6801E /* Surveys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surveys.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +153,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		430D617D22ED7536006E0047 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				430D617E22ED7550006E0047 /* ProgressView.swift */,
+				430D618022ED757F006E0047 /* ProgressView.xib */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
 		432D624822A6F3F200D6801E = {
 			isa = PBXGroup;
 			children = (
@@ -227,10 +250,15 @@
 			isa = PBXGroup;
 			children = (
 				437E1CBB22ABF8BE00AA5817 /* Collection.swift */,
-				437E1CC522AC15B900AA5817 /* URLRequest.swift */,
-				437E1CCF22AC1C8E00AA5817 /* UIViewController.swift */,
-				437E1CD922AC280600AA5817 /* UIImageView.swift */,
 				43338F4C22AD3A590008F52A /* Data.swift */,
+				430D617922ED7454006E0047 /* Date.swift */,
+				430D617322ED7243006E0047 /* String.swift */,
+				430D617B22ED74CF006E0047 /* UICollectionView.swift */,
+				430D617522ED7326006E0047 /* UIColor.swift */,
+				437E1CD922AC280600AA5817 /* UIImageView.swift */,
+				430D617722ED7409006E0047 /* UIView.swift */,
+				437E1CCF22AC1C8E00AA5817 /* UIViewController.swift */,
+				437E1CC522AC15B900AA5817 /* URLRequest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +283,7 @@
 		434F2CF422A7F66100DE01A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				430D617D22ED7536006E0047 /* ProgressView */,
 				437E1CB122ABE2AB00AA5817 /* ISPageControl */,
 				434F2D0922A804CF00DE01A9 /* SurveyItemCell */,
 			);
@@ -530,6 +559,7 @@
 				434F2D0D22A804F400DE01A9 /* SurveyItemCell.xib in Resources */,
 				434F2CFC22A7F6FC00DE01A9 /* SurveysViewController.xib in Resources */,
 				437E1CE322AC3CF800AA5817 /* SurveyDetailViewController.xib in Resources */,
+				430D618122ED757F006E0047 /* ProgressView.xib in Resources */,
 				432D625F22A6F3F400D6801E /* LaunchScreen.storyboard in Resources */,
 				432D625C22A6F3F400D6801E /* Assets.xcassets in Resources */,
 			);
@@ -651,8 +681,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				434F2CFF22A7F7EF00DE01A9 /* Application.swift in Sources */,
+				430D617A22ED7454006E0047 /* Date.swift in Sources */,
+				430D617622ED7326006E0047 /* UIColor.swift in Sources */,
 				437E1CCE22AC1C0E00AA5817 /* SurveyUseCase.swift in Sources */,
 				434F2D0522A802F200DE01A9 /* Constants.swift in Sources */,
+				430D617822ED7409006E0047 /* UIView.swift in Sources */,
+				430D617422ED7243006E0047 /* String.swift in Sources */,
 				437E1CB322ABE2BA00AA5817 /* ISPageControl.swift in Sources */,
 				437E1CD822AC262900AA5817 /* SurveyItemViewModel.swift in Sources */,
 				437E1CC422AC0B9C00AA5817 /* TokenType.swift in Sources */,
@@ -670,10 +704,12 @@
 				437E1CDA22AC280600AA5817 /* UIImageView.swift in Sources */,
 				437E1CD622AC244E00AA5817 /* Error.swift in Sources */,
 				434F2D0322A8020D00DE01A9 /* Color.swift in Sources */,
+				430D617C22ED74CF006E0047 /* UICollectionView.swift in Sources */,
 				434F2CFB22A7F6FC00DE01A9 /* SurveysViewController.swift in Sources */,
 				437E1CC622AC15B900AA5817 /* URLRequest.swift in Sources */,
 				437E1CCB22AC1A0000AA5817 /* Survey.swift in Sources */,
 				437E1CB822ABF41C00AA5817 /* Token.swift in Sources */,
+				430D617F22ED7550006E0047 /* ProgressView.swift in Sources */,
 				437E1CD422AC236800AA5817 /* NimbleNetwork.swift in Sources */,
 				437E1CAC22AB32F800AA5817 /* Measure.swift in Sources */,
 			);

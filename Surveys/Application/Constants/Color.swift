@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwifterSwift
 
 extension UIColor {
     static let cardinalRed: UIColor? = UIColor(hex: 0xCA202E)

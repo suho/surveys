@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwifterSwift
 
 struct SurveyItemViewModel {
     private let survey: Survey
