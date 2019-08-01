@@ -103,13 +103,13 @@ extension NimbleTarget {
     var sampleData: Data {
         switch self {
         case .credentials:
-            if let data = Data(forResource: "Token-Success",
+            if let data = try? Data(forResource: "Token-Success",
                             withExtension: "json",
                             bundle: Bundle(for: NetworkTests.self)) {
                 return data
             }
         case .surveys:
-            if let data = Data(forResource: "Surveys-Success",
+            if let data = try? Data(forResource: "Surveys-Success",
                                withExtension: "json",
                                bundle: Bundle(for: NetworkTests.self)) {
                 return data
