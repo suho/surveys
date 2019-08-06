@@ -15,7 +15,7 @@ final class SurveysViewModelTests: QuickSpec {
         super.spec()
         let network = MockNetwork()
         let viewModel = SurveysViewModel(useCase: network)
-        describe("Surveys ViewModel Testing") {
+        describe("A Surveys View Model") {
             initContext(network: network, viewModel: viewModel)
             fetchAPISuccessContext(network: network, viewModel: viewModel)
             dataEmptyContext(network: network, viewModel: viewModel)
@@ -25,38 +25,45 @@ final class SurveysViewModelTests: QuickSpec {
 
     private func initContext(network: MockNetwork, viewModel: SurveysViewModel) {
         var viewModel = viewModel
-        context("Init") {
+        context("when initializing with MockNetwork") {
             beforeEach {
                 viewModel = SurveysViewModel(useCase: network)
             }
-            it("Data After Init Testing") {
+            it("don't have any value in surveys list") {
                 expect(viewModel.numberOfItems(in: 0)) == 0
                 expect {
                     try viewModel.viewModelForItem(at: 0)
-                    }.to(throwError(App.Error.indexOutOfRange))
+                    }.to(throwError(Constants.Error.indexOutOfRange))
             }
         }
     }
 
     private func dataEmptyContext(network: MockNetwork, viewModel: SurveysViewModel) {
         var viewModel = viewModel
-        context("Fetch API Success But Data Empty", closure: {
+        context("when the response success but empty data", closure: {
             beforeEach {
                 network.emptyData = true
                 network.shouldSuccess = true
                 viewModel = SurveysViewModel(useCase: network)
             }
 
-            it("Data After Fetch API Success But Empty Data Testing", closure: {
+            it("don't have any value in surveys array", closure: {
                 waitUntil(timeout: Configuration.timeout, action: { done in
-                    viewModel.fetch(shouldLoadMore: true, completion: { _ in
+                    viewModel.loadMore {
                         expect(viewModel.numberOfItems(in: 0)) == 0
-                        expect {
-                            try viewModel.viewModelForItem(at: 0)
-                            }.to(throwError(App.Error.indexOutOfRange))
+                        expect { try viewModel.viewModelForItem(at: 0) }
+                            .to(throwError(Constants.Error.indexOutOfRange))
+                        done()
+                    }
+                })
+            })
+
+            it("can't not loadmore", closure: {
+                waitUntil(timeout: Configuration.timeout, action: { done in
+                    viewModel.loadMore {
                         expect(viewModel.shouldLoadMore(at: Configuration.firstIndexPath)) == false
                         done()
-                    })
+                    }
                 })
             })
         })
@@ -64,22 +71,30 @@ final class SurveysViewModelTests: QuickSpec {
 
     private func apiFailureContext(network: MockNetwork, viewModel: SurveysViewModel) {
         var viewModel = viewModel
-        context("Fetch API Failure", closure: {
+        context("when the response is failure", closure: {
             beforeEach {
                 network.shouldSuccess = false
                 viewModel = SurveysViewModel(useCase: network)
             }
 
-            it("Data After Fetch API Failure Testing", closure: {
+            it("has empty surveys", closure: {
                 waitUntil(timeout: Configuration.timeout, action: { done in
-                    viewModel.fetch(shouldLoadMore: true, completion: { _ in
+                    viewModel.loadMore {
                         expect(viewModel.numberOfItems(in: 0)) == 0
                         expect {
                             try viewModel.viewModelForItem(at: 0)
-                            }.to(throwError(App.Error.indexOutOfRange))
+                            }.to(throwError(Constants.Error.indexOutOfRange))
+                        done()
+                    }
+                })
+            })
+
+            it("can't not loadmore", closure: {
+                waitUntil(timeout: Configuration.timeout, action: { done in
+                    viewModel.loadMore {
                         expect(viewModel.shouldLoadMore(at: Configuration.firstIndexPath)) == false
                         done()
-                    })
+                    }
                 })
             })
         })
@@ -87,37 +102,31 @@ final class SurveysViewModelTests: QuickSpec {
 
     private func fetchAPISuccessContext(network: MockNetwork, viewModel: SurveysViewModel) {
         var viewModel = viewModel
-        context("Fetch API Success", closure: {
+        context("when the response is success", closure: {
             beforeEach {
                 network.shouldSuccess = true
                 viewModel = SurveysViewModel(useCase: network)
             }
 
-            it("Data After Fetch API Success Testing", closure: {
+            it("has surveys data", closure: {
                 waitUntil(timeout: Configuration.timeout, action: { done in
-                    viewModel.fetch(shouldLoadMore: false, completion: { _ in
+                    viewModel.fetch {
                         expect(viewModel.numberOfItems(in: 0)) == 10
                         expect {
                             try viewModel.viewModelForItem(at: 0)
-                            }.notTo(throwError(App.Error.indexOutOfRange))
-                        expect(viewModel.shouldLoadMore(at: Configuration.firstIndexPath)) == false
-                        expect(viewModel.shouldLoadMore(at: Configuration.sixthIndexPath)) == true
+                            }.notTo(throwError(Constants.Error.indexOutOfRange))
                         done()
-                    })
+                    }
                 })
             })
 
-            it("Data After Fetch API Loadmore Success Testing", closure: {
+            it("can loadmore", closure: {
                 waitUntil(timeout: Configuration.timeout, action: { done in
-                    viewModel.fetch(shouldLoadMore: true, completion: { _ in
-                        expect(viewModel.numberOfItems(in: 0)) == 10
-                        expect {
-                            try viewModel.viewModelForItem(at: 0)
-                            }.notTo(throwError(App.Error.indexOutOfRange))
+                    viewModel.fetch {
                         expect(viewModel.shouldLoadMore(at: Configuration.firstIndexPath)) == false
                         expect(viewModel.shouldLoadMore(at: Configuration.sixthIndexPath)) == true
                         done()
-                    })
+                    }
                 })
             })
         })

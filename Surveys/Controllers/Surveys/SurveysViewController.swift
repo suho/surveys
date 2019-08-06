@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import SwifterSwift
-import SnapKit
-import SVProgressHUD
 
 final class SurveysViewController: UIViewController {
 
@@ -21,7 +18,7 @@ final class SurveysViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData(shouldLoadMore: false)
+        setupViewModel()
         setupUI()
     }
 
@@ -31,28 +28,15 @@ final class SurveysViewController: UIViewController {
         setupPageControl()
         setupSurveyButton()
     }
+
+    private func setupViewModel() {
+        viewModel.delegate = self
+        viewModel.fetch()
+    }
 }
 
 // MARK: - Action
 extension SurveysViewController {
-    private func loadData(shouldLoadMore: Bool) {
-        if !shouldLoadMore { SVProgressHUD.show() }
-        viewModel.fetch(shouldLoadMore: shouldLoadMore) { [weak self] result in
-            if !shouldLoadMore { SVProgressHUD.popActivity() }
-            guard let this = self else { return }
-            switch result {
-            case .failure(let error):
-                this.showError(error)
-            case .success:
-                if shouldLoadMore {
-                    this.updateUI()
-                } else {
-                    this.refreshUI()
-                }
-            }
-        }
-    }
-
     private func updateUI() {
         collectionView.reloadData()
         pageControl.numberOfPages = viewModel.numberOfItems(in: 0)
@@ -66,11 +50,11 @@ extension SurveysViewController {
     }
 
     @objc private func onPressRefreshButton() {
-        loadData(shouldLoadMore: false)
+        viewModel.fetch()
     }
 
     @objc private func onPressMenuButton() {
-        showAlert(title: App.String.surveysApp, message: App.String.authorSuHo)
+        showAlert(title: Constants.surveysApp, message: Constants.authorSuHo)
     }
 
     @IBAction private func onPressSurveyButton(_ sender: Any) {
@@ -78,14 +62,14 @@ extension SurveysViewController {
         guard let itemViewModel = try? viewModel.viewModelForItem(at: currentIndex) else { return }
         let controller = SurveyDetailViewController()
         controller.viewModel = itemViewModel
-        navigationController?.pushViewController(controller)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
 // MARK: - Setup UI
 extension SurveysViewController {
     private func setupNavigationBar() {
-        navigationItem.title = App.String.surveys.uppercased()
+        navigationItem.title = Constants.surveys.uppercased()
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(onPressRefreshButton))
         navigationItem.setLeftBarButton(refresh, animated: false)
         let menu = UIBarButtonItem(image: UIImage(named: "ic-menu"), style: .plain, target: self, action: #selector(onPressMenuButton))
@@ -93,7 +77,7 @@ extension SurveysViewController {
     }
 
     private func setupCollectionView() {
-        collectionView.backgroundColor = App.Color.barBackground
+        collectionView.backgroundColor = UIColor.whaleBlue
         collectionView.register(nibWithCellClass: SurveyItemCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -103,18 +87,41 @@ extension SurveysViewController {
     }
 
     private func setupPageControl() {
-        pageContainer.snp.makeConstraints { (maker) in
-            maker.trailingMargin.equalTo((App.Measure.screenSize.width - pageControl.height) / 2)
-        }
+        let trailingConstant = (Measure.screenSize.width - pageControl.height) / 2
+        let trailingAnchor = pageContainer
+            .trailingAnchor
+            .constraint(equalTo: view.trailingAnchor,
+                        constant: trailingConstant)
+        trailingAnchor.isActive = true
         pageContainer.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
     }
 
     private func setupSurveyButton() {
         surveyButton.isHidden = true
         surveyButton.titleLabel?.font = UIFont.systemFont(ofSize: Configuration.surveyFontSize)
-        surveyButton.titleLabel?.textColor = App.Color.surveyTitle
-        surveyButton.backgroundColor = App.Color.surveyButton
-        surveyButton.titleLabel?.text = App.String.takeTheSurvey
+        surveyButton.titleLabel?.textColor = .white
+        surveyButton.backgroundColor = .cardinalRed
+        surveyButton.titleLabel?.text = Constants.takeTheSurvey
+    }
+}
+
+// MARK: - SurveysViewModelDelegate
+extension SurveysViewController: SurveysViewModelDelegate {
+    func viewModel(_ viewModel: SurveysViewModel, performAction action: SurveysViewModel.Action) {
+        switch action {
+        case .didFetch:
+            refreshUI()
+        case .didLoadMore:
+            updateUI()
+        case .didFail(let error):
+            showError(error)
+        case .showLoading(let isLoading):
+            if isLoading {
+                ProgressView.show()
+            } else {
+                ProgressView.hide()
+            }
+        }
     }
 }
 
@@ -142,7 +149,7 @@ extension SurveysViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if viewModel.shouldLoadMore(at: indexPath) {
-            loadData(shouldLoadMore: true)
+            viewModel.loadMore()
         }
     }
 }
@@ -152,7 +159,7 @@ extension SurveysViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return App.Measure.screenSize
+        return Measure.screenSize
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -169,8 +176,16 @@ extension SurveysViewController {
         static let controlSize: CGSize = CGSize(width: 7, height: 7)
         static func contentInset(with bar: UINavigationBar) -> UIEdgeInsets {
             let navigationBarHeight = bar.height
-            let statusBarHeight = App.Measure.statusBarHeight
+            let statusBarHeight = Measure.statusBarHeight
             return .init(top: -navigationBarHeight - statusBarHeight, left: 0, bottom: 0, right: 0)
         }
     }
+}
+
+// MARK: - Constants
+private extension Constants {
+    static let surveys = "Surveys"
+    static let surveysApp = "Surveys App"
+    static let authorSuHo = "Author @suho"
+    static let takeTheSurvey = "Take the survey"
 }

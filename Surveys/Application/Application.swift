@@ -8,7 +8,6 @@
 
 import UIKit
 import Moya
-import SVProgressHUD
 
 final class Application {
     static let current = Application()
@@ -25,9 +24,5 @@ final class Application {
         controller.viewModel = viewModel
         let navigation = NavigationController(rootViewController: controller)
         window?.rootViewController = navigation
-    }
-
-    func configure() {
-        SVProgressHUD.setDefaultMaskType(.clear)
     }
 }

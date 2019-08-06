@@ -15,12 +15,12 @@ final class SurveyItemViewModelTests: QuickSpec {
         super.spec()
         let survey: Survey = Survey.dummy
         var viewModel = SurveyItemViewModel(survey: survey)
-        describe("Check Data When Init Data") {
-            context("Init") {
+        describe("A survey item view model") {
+            context("when initializing with survey") {
                 beforeEach {
                     viewModel = SurveyItemViewModel(survey: survey)
                 }
-                it("Data After Init Testing") {
+                it("has value for each properties as expected") {
                     expect(viewModel.title) == "title"
                     expect(viewModel.description) == "description"
                     expect(viewModel.imagePath) == "coverImageURL" + "l"

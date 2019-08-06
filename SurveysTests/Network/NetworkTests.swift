@@ -14,48 +14,16 @@ import Result
 
 final class NetworkTests: QuickSpec {
 
-    private func successRequestsContext(provider: MoyaProvider<NimbleTarget>) {
-        context("Success Requests") {
-            it("Get Access Token Success") {
-                waitUntil(timeout: Configuration.timeout, action: { done in
-                    provider.request(.credentials, completion: { result in
-                        if case Result<Moya.Response, MoyaError>.success(let value) = result {
-                            let token = try? JSONDecoder().decode(Token.self, from: value.data)
-                            expect(token).notTo(beNil())
-                        }
-                        done()
-                    })
-                })
-            }
-
-            it("Get Surveys Success") {
-                waitUntil(timeout: Configuration.timeout, action: { done in
-                    provider.request(.surveys(page: 0, perPage: 10), completion: { result in
-                        if case Result<Moya.Response, MoyaError>.success(let value) = result {
-                            let surveys = try? JSONDecoder().decode([Survey].self, from: value.data)
-                            expect(surveys).notTo(beNil())
-                            expect(surveys?.count) == 8
-                        }
-                        done()
-                    })
-                })
-            }
-        }
-    }
-
     override func spec() {
         super.spec()
-        var provider = MoyaProvider<NimbleTarget>(endpointClosure: NetworkTests.successEndpointClosure,
-                                                  stubClosure: MoyaProvider.immediatelyStub)
-        describe("Network Testing") {
-            successRequestsContext(provider: provider)
-
-            context("Failure Requests") {
+        var provider: MoyaProvider<NimbleTarget>!
+        describe("A Moya Provider with NimbleTarget") {
+            context("when the response is failure") {
                 beforeEach {
                     provider = MoyaProvider<NimbleTarget>(endpointClosure: NetworkTests.failureEndpointClosure,
                                                           stubClosure: MoyaProvider.immediatelyStub)
                 }
-                it("Get Access Token Failure") {
+                it("can not get access token") {
                     waitUntil(timeout: Configuration.timeout, action: { done in
                         provider.request(.credentials, completion: { result in
                             if case Result<Moya.Response, MoyaError>.failure(let error) = result {
@@ -66,7 +34,7 @@ final class NetworkTests: QuickSpec {
                     })
                 }
 
-                it("Get Surveys Failure") {
+                it("can not get surveys") {
                     waitUntil(timeout: Configuration.timeout, action: { done in
                         provider.request(.surveys(page: 0, perPage: 10), completion: { result in
                             if case Result<Moya.Response, MoyaError>.failure(let error) = result {
@@ -78,14 +46,26 @@ final class NetworkTests: QuickSpec {
                 }
             }
 
-            context("Token Request Mapping") {
+            context("when the response is success") {
                 beforeEach {
                     provider = MoyaProvider<NimbleTarget>(endpointClosure: NetworkTests.successEndpointClosure,
                                                           requestClosure: MoyaProvider<NimbleTarget>.tokenRequestMapping,
                                                           stubClosure: MoyaProvider.immediatelyStub)
                 }
 
-                it("Get Surveys Failure") {
+                it("has access token as expected") {
+                    waitUntil(timeout: Configuration.timeout, action: { done in
+                        provider.request(.credentials, completion: { result in
+                            if case Result<Moya.Response, MoyaError>.success(let value) = result {
+                                let token = try? JSONDecoder().decode(Token.self, from: value.data)
+                                expect(token).notTo(beNil())
+                            }
+                            done()
+                        })
+                    })
+                }
+
+                it("has value for surveys as expected") {
                     waitUntil(timeout: Configuration.timeout, action: { done in
                         provider.request(.surveys(page: 0, perPage: 10), completion: { result in
                             if case Result<Moya.Response, MoyaError>.success(let value) = result {
@@ -101,7 +81,7 @@ final class NetworkTests: QuickSpec {
         }
     }
 
-    internal class func successEndpointClosure(_ target: NimbleTarget) -> Endpoint {
+    class func successEndpointClosure(_ target: NimbleTarget) -> Endpoint {
         return Endpoint(url: URL(target: target).absoluteString,
                         sampleResponseClosure: { .networkResponse(200, target.sampleData) },
                         method: target.method,
@@ -123,13 +103,15 @@ extension NimbleTarget {
     var sampleData: Data {
         switch self {
         case .credentials:
-            if let url = Bundle(for: NetworkTests.self).url(forResource: "Token-Success", withExtension: "json"),
-                let data = try? Data(contentsOf: url) {
+            if let data = try? Data(forResource: "Token-Success",
+                            withExtension: "json",
+                            bundle: Bundle(for: NetworkTests.self)) {
                 return data
             }
         case .surveys:
-            if let url = Bundle(for: NetworkTests.self).url(forResource: "Surveys-Success", withExtension: "json"),
-                let data = try? Data(contentsOf: url) {
+            if let data = try? Data(forResource: "Surveys-Success",
+                               withExtension: "json",
+                               bundle: Bundle(for: NetworkTests.self)) {
                 return data
             }
         }

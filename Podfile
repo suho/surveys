@@ -14,10 +14,7 @@ def test_pods
 end
 
 def util_pods
-    pod 'SVProgressHUD', '2.2.5'
-    pod 'SwifterSwift', '5.0.0'
     pod 'Kingfisher', '5.5.0'
-    pod 'SnapKit', '5.0.0'
 end
 
 target 'Surveys' do

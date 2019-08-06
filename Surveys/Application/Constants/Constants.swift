@@ -1,5 +1,5 @@
 //
-//  App.swift
+//  Constants.swift
 //  Surveys
 //
 //  Created by Su Ho V. on 6/5/19.
@@ -8,4 +8,4 @@
 
 import Foundation
 
-enum App {}
+enum Constants {}

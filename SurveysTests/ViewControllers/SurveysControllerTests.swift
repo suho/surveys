@@ -20,12 +20,12 @@ final class SurveysControllerTests: QuickSpec {
         let controller = SurveysViewController()
         let viewModel = SurveysViewModel(useCase: useCase)
         controller.viewModel = viewModel
-        describe("Load View") {
-            context("Init Data After Load View") {
+        describe("A surveys view controller") {
+            context("when initializing with usecase and view model") {
                 beforeEach {
                     controller.loadViewIfNeeded()
                 }
-                it("Data After Init Testing") {
+                it("has 8 items on collectionview") {
                     expect(controller.collectionView.numberOfItems()) == 8
                 }
             }
